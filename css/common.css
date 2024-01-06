@@ -18,10 +18,17 @@ img {
   border: 0;
 }
 
+header h1 {
+  width: 100%;
+  max-width: 100vw;
+  margin: 20px 0 0 20px;
+}
+
 header .btn_main {
   position: fixed;
   top: 30px;
   right: 33px;
+  border: 1px solid rgb(255, 0, 191);
 }
 
-/*# sourceMappingURL=sub_style.css.map */
+/*# sourceMappingURL=common.css.map */
