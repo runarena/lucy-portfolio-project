@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
+img {
+  border: 0;
+}
+
+header .btn_main {
+  position: fixed;
+  top: 30px;
+  right: 33px;
+}
+
+/*# sourceMappingURL=sub_style.css.map */
