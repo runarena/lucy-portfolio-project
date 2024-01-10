@@ -255,7 +255,7 @@ body {
           img{width: 100%;max-width:1723px;}
         }
         .vill2img_vill3 {
-          padding:10% 0% 3.5% 6%;text-align:right;
+          padding:6% 0% 3.5% 6%;text-align:right;
           img{width: 100%;max-width:1778px;}
         }
       }
@@ -279,19 +279,14 @@ body {
       }
 
       .deco_vill2 {
-        position: relative;
-        width: 100%;
-        height: 200px;
-        overflow: hidden;
-        img:nth-of-type(1){
-          width: 82%;
-          position: absolute;
-          top: 50%;
-          transform: translateX(4%);
-          left: 0; /* 초기 위치 설정 */
-          transition: left 0.3s ease; /* 스크롤에 반응하는 부드러운 전환 효과 */
-        }
+        width: 100%; padding:8% 0 0% 0; overflow: hidden;
+        img {width: 82%;transform: translateX(-15%);}
       }
+      .deco_vill3 {
+        width: 100%; padding:3% 0 4% 0; text-align:right; overflow: hidden;
+        img {width: 82%;transform: translateX(10%);}
+      }
+
       @keyframes moveRight {
           from {
             left: 0;
@@ -302,18 +297,18 @@ body {
       }
     }
     .beauty {
-      /*width: 100%;*/
+      width: 100%;
       overflow: hidden;
       background: url(../images/deco_vill_2.png) repeat-x bottom;
 
       .beautyall {
+        width: 600%;
         display: flex;
         flex-direction: row;
-        /*overflow-x:scroll;*/
-        margin: 2.9% 0 0 9%;
+        margin:3% 0 0 0;
         .beautyimg {
-          padding-right: 1.95%;
-          img {}
+          padding-right: 0.3%; transform: translateX(100%);
+          img {width:100%;}
         }
       }
     }

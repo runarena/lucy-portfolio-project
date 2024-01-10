@@ -51,40 +51,11 @@
                     <li class="beautyimg"><img src="images/img_villpic12.jpg" alt=""></li>
                 </ul>
             </div>
+            <div class="deco_vill3">
+                <img src="images/deco_vill_1.png" alt="">
+            </div>
             <p class="vill2img_vill3"><img src="images/img_vill6.png" alt=""></p>
         </div>
     </main>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const decoVill2 = document.querySelector(".deco_vill2");
-          const images = decoVill2.querySelectorAll("img");
-          let scrollPos = window.scrollY || window.pageYOffset;
-          let isScrolling = false;
-
-          function handleScroll() {
-            if (!isScrolling) {
-              isScrolling = true;
-
-              // 부드러운 스크롤 동작
-              requestAnimationFrame(function() {
-                const newScrollPos = window.scrollY || window.pageYOffset;
-                const deltaY = newScrollPos - scrollPos;
-
-                // 스크롤 방향에 따라 이미지를 이동
-                images.forEach(img => {
-                    img.style.left = `${parseFloat(img.style.left || 0) - deltaY}px`;
-                });
-
-                // 현재 스크롤 위치를 업데이트
-                scrollPos = newScrollPos;
-                isScrolling = false;
-              });
-            }
-          }
-
-          // 스크롤 이벤트 리스너 등록
-          window.addEventListener("scroll", handleScroll);
-        });
-    </script>
 </body>
 </html>
