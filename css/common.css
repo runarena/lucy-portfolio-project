@@ -443,20 +443,39 @@ body main .sub_vill2 .deco_vill3 img {
 body main .beauty {
   width: 100%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: url(../images/deco_vill_2.png) repeat-x bottom;
 }
-body main .beauty .beautyall {
-  width: 600%;
-  display: flex;
-  flex-direction: row;
-  margin: 3% 0 0 0;
-}
-body main .beauty .beautyall .beautyimg {
-  padding-right: 0.3%;
-  transform: translateX(100%);
-}
-body main .beauty .beautyall .beautyimg img {
+body main .beauty .beautyparts {
   width: 100%;
+  margin: 3% 0 0 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+  user-select: none;
+  cursor: grab;
+  transition: all 0.2s;
+  /*transform: scale(0.98);*/
+  will-change: transform;
+  position: relative;
+  margin-left: 9%;
+}
+body main .beauty .beautyparts .beautyimg {
+  padding-right: 2%;
+  transform: translateX(100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .beauty .beautyparts .beautyimg img {
+  width: 100%;
+  max-width: 635px;
+}
+body main .beauty .beautyparts.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
 }
 @media screen and (min-width: 1250px) {
   body main .sub_vill1 p:nth-of-type(1) {

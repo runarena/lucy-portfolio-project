@@ -299,17 +299,39 @@ body {
     .beauty {
       width: 100%;
       overflow: hidden;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       background: url(../images/deco_vill_2.png) repeat-x bottom;
 
-      .beautyall {
-        width: 600%;
-        display: flex;
-        flex-direction: row;
+      .beautyparts {
+        width: 100%;
         margin:3% 0 0 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        white-space: nowrap;
+        user-select: none;
+        cursor: grab;
+        transition: all 0.2s;
+        /*transform: scale(0.98);*/
+        will-change: transform;
+        position: relative;
+        margin-left:9%;
+
         .beautyimg {
-          padding-right: 0.3%; transform: translateX(100%);
-          img {width:100%;}
+          padding-right: 2%; transform: translateX(100%);
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          img {width:100%; max-width:635px;}
         }
+      }
+      .beautyparts.active {
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+        
       }
     }
     @media screen and (min-width: 1250px) {
