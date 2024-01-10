@@ -4,95 +4,373 @@
 
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body {width:100%;height:100vh; min-width:350px;}
-header {position: absolute;top:0;}
-header h1 {
-    display:inline-block;
-    padding:20px 0 0 40px;
-}
-header h1 svg {
-    width:100%;
-    height: auto;
-    max-width: 100vw;
-}
-header .btn_main {
+body {
+  width:100%;height:100vh; min-width:350px;
+  header {
+    position: absolute;top:0;z-index:999;
+    @media screen and (min-width: 900px) {
+      h1 {
+        display:inline-block;
+        padding:20px 0 0 40px;
+        svg {
+          width:100%;
+          height: auto;
+          max-width: 100vw;
+        }
+      }
+      .btn_main {
+        position: fixed;
+        top: 30px; right:33px;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      h1 {padding:10px 0 0 10px;
+        svg {width:10vw;height: auto;max-width: 100vw;}
+      }
+      .btn_main {position: fixed; top: 10px; right:10px;}
+    }
+  }
+  
+  main {
+    /*---------------------------------------------page num---------------------------------------------*/
+    .pagemv {
+      .arrows {
+        display: flex;justify-content: center;
+        button {
+          cursor: pointer;border:none;
+          width:50px; height:30px;
+          font-size: 0;
+        }
+        .arrow_left {
+          background: url(../images/arrow-left.png) no-repeat center;
+          &:hover {background: url(../images/arrow-lefton.png) no-repeat center;}
+        }
+        .arrow_right {
+          background: url(../images/arrow-right.png) no-repeat center;
+          &:hover {background: url(../images/arrow-righton.png) no-repeat center;}
+        }
+        .image-count {
+          span {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: #2A2A2A;
+            em {
+              font-size: 10px;
+              color:#2A2A2A;
+              padding:0 4px;
+              font-weight: 900;
+              display:inline-block;
+              height:12px;
+              vertical-align: middle;
+              font-style:normal;
+              }
+          }
+          .generated-num {color:red;}
+          .generated-slash {
+            font-size: 10px;
+            color:#2A2A2A;
+            padding:0 4px;
+            font-weight: 900;
+            display:inline-block;
+            height:12px;
+            vertical-align: middle;
+          }  
+        }
+      }
+      @media screen and (min-width: 900px) {
+        .pagenum {
+          position:fixed;width:92px;left:39px;top:50%;z-index: 88;
+          display:flex; flex-direction: row; border-radius: 24px;
+          background-color: rgba(255, 255, 255, .26); padding:4px 6px;
+          a {
+            display: block;
+            border: 2px solid #2A2A2A;
+            font-family: 'League Spartan', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #2A2A2A;
+            width:30px;
+            height:22px;
+            border-radius: 11px;
+            text-align: center;
+            padding-top: 3px;
+          }
+          .deco_vill1 {
+            display:block;
+            width:13px;height:20px;
+            background: url(../images/deco_vill_3.png) no-repeat;
+            background-position: center;
+          }
+        } 
+      }
+      @media screen and (max-width: 900px) {
+        .pagenum {
+          position:fixed;width:30px;left:4%;top:50%;z-index: 88;
+          display:flex; flex-direction:column;border-radius: 24px;
+          background-color: rgba(255, 255, 255, .26); padding:6px 4px;
+          a {
+            display: block;
+            border: 2px solid #2A2A2A;
+            font-family: 'League Spartan', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #2A2A2A;
+            width:22px;
+            height:22px;
+            border-radius: 11px;
+            text-align: center;
+            padding-top: 3px;
+          }
+          .deco_vill1 {
+            display:block;
+            width:20px;height:20px;
+            background: url(../images/deco_vill_4.png) no-repeat;
+            background-position: center;
+          }
+        } 
+      }
+    }
+    /*---------------------------------------------sub ocoa---------------------------------------------*/
+    .sub_ocoa {
+      width:100%;
+      height:100%;
+      text-align: center;
+      padding-bottom: 94px;
+      background: url(../images/deco_ocoa_1.jpg) no-repeat top right/20.5%, url(../images/deco_ocoa_2.png) no-repeat bottom right;
+      .sub_ocoa_img1 {
+        padding-top: 94px;padding-left: 11%;
+        img {width: 100%;max-width: 1663px;}
+      }
+      .sub_ocoa_img2 {display: flex; justify-content:center;
+        .sub_ocoa_img2w {
+          margin-right:4.2%;
+          img {width: 100%;max-width: 1306px;}
+        }
+        .sub_ocoa_img2m {
+          img {width: 100%;max-width: 326px;}
+        }
+      }
+    }
+    /*---------------------------------------------sub elihigh---------------------------------------------*/
+    .sub_elihigh {
+      width: 100%;
+      height:100vh;
+      padding-top: 1.5%;
+      background: #FAF9F5 url(../images/deco_elihigh.png) no-repeat center top/100%;
+      position: relative;
+
+      .sub_elihigh_deco {
+        position: absolute;
+        /* left: 16%; right: 8%;*/
+        z-index: 3;
+        img {
+          width: 100%;
+          max-width: 1452px;
+          height: auto;
+        }
+      }
+
+      .images {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        .sub_elihigh_img {
+          position: absolute;
+          height: auto;
+          /* left: 16%; right: 8%;*/
+          display: none;
+          transition: transform 0.5s ease;
+
+          img {
+            width: 100%;
+            max-width: 1452px;
+            height: auto;
+          }
+        }
+        .sub_elihigh_img.active {
+          display: block;
+          transform: translateX(0);
+        }
+      }
+    }
+    @media screen and (min-width: 1030px) {
+      .pagemv .arrows  {
+        position:fixed;width: 142px;left:18px;top:350px;z-index: 88;}
+      .pagemv .ell  {
+        position:fixed;width: 142px;left:18px;top:350px;z-index: 88;}
+      .sub_elihigh .sub_elihigh_deco {left: 16%; right: 8%;}
+      .sub_elihigh .sub_elihigh_img {left: 16%; right: 8%;}
+    }
+  
+    @media screen and (min-width: 600px) and (max-width: 1030px) {
+      .pagemv .arrows  {
+        position:fixed;width: 142px;left:18px;top:350px;z-index: 88;}
+      .pagemv .ell {
+        position:fixed;width: 142px;left:18px;top:350px;z-index: 88;}
+      .sub_elihigh .sub_elihigh_deco {left: 16%; right: 8%;}
+      .sub_elihigh .sub_elihigh_img {left: 16%; right: 8%;}
+    }
+    @media screen and (max-width: 600px) {
+      .pagemv .arrows  {
+        position:fixed;width: 142px;left:18px;top:350px;z-index: 88;}
+        .pagemv .ell  {
+        position:fixed;width: 142px;left:18px;top:350px;z-index: 88;} 
+      .sub_elihigh .sub_elihigh_deco {
+        left: 16%; right: 12%;
+      }
+      .sub_elihigh .sub_elihigh_img {
+        left: 16%; right: 12%;
+      }
+    }
+     /*---------------------------------------------sub village---------------------------------------------*/
+    .sub_vill1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      p img {width:100%;padding:10% 0 5% 0;}
+    }
+    @media screen and (min-width: 1250px) {
+      .sub_vill1 p:nth-of-type(1) {padding:0 2% 0 12%;}
+      .sub_vill1 p:nth-of-type(2) {padding:0 6% 0 0;}
+    }
+    @media screen and (max-width: 1250px) {
+      .sub_vill1 p:nth-of-type(1) {padding:0 2% 0 16%;}
+      .sub_vill1 p:nth-of-type(2) {padding:0 13% 0 0;}
+    }
+
+    .sub_vill2 {
+      @media screen and (min-width: 1260px) {
+        .vill2img_vill1 {
+          padding:5% 5% 0 8%;text-align:center;
+          background: url(../images/deco_vill_5.png) repeat-x;
+          background-size:100%;
+          background-position: middle;
+          img{width: 100%;max-width:1644px;}
+        }
+        .vill2img_vill2 {
+          max-width:1920px;
+          padding:10.7% 0% 2.2% 9%;text-align:right;
+          img{width: 100%;max-width:1723px;}
+        }
+        .vill2img_vill3 {
+          padding:10% 0% 3.5% 6%;text-align:right;
+          img{width: 100%;max-width:1778px;}
+        }
+      }
+      @media screen and (max-width: 1260px) {
+        .vill2img_vill1 {
+          padding:5% 5% 0 15%;text-align:center;
+          background: url(../images/deco_vill_5.png) repeat-x;
+          background-size:100%;
+          background-position: middle;
+          img{width: 100%;max-width:1644px;}
+        }
+        .vill2img_vill2 {
+          max-width:1920px;
+          padding:10.7% 0% 2.2% 15%;text-align:right; border: 1px solid red;
+          img{width: 100%;max-width:1723px;}
+        }
+        .vill2img_vill3 {
+          padding:10% 0% 3.5% 12%;text-align:right;
+          img{width: 100%;max-width:1778px;}
+        }
+      }
+
+      .deco_vill2 {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        img:nth-of-type(1){
+          width: 82%;
+          position: absolute;
+          top: 50%;
+          transform: translateX(4%);
+          left: 0; /* 초기 위치 설정 */
+          transition: left 0.3s ease; /* 스크롤에 반응하는 부드러운 전환 효과 */
+        }
+      }
+      @keyframes moveRight {
+          from {
+            left: 0;
+          }
+          to {
+            left: 100%;
+          }
+      }
+    }
+    .beauty {
+      /*width: 100%;*/
+      overflow: hidden;
+      background: url(../images/deco_vill_2.png) repeat-x bottom;
+      .beautyall {
+        display: flex;
+        flex-direction: row;
+        /*overflow-x:scroll;*/
+        margin: 2.9% 0 0 9%;
+        .beautyimg {
+          padding-right: 1.95%;
+          img {}
+        }
+      }
+    }
+    @media screen and (min-width: 1250px) {
+      .sub_vill1 p:nth-of-type(1) {padding:0 2% 0 12%;}
+      .sub_vill1 p:nth-of-type(2) {padding:0 6% 0 0;}
+    }
+    @media screen and (max-width: 1250px) {
+      .sub_vill1 p:nth-of-type(1) {padding:0 2% 0 16%;}
+      .sub_vill1 p:nth-of-type(2) {padding:0 13% 0 0;}
+    }
+
+  }
+
+/*-------topbtnw--------*/
+#topBtn {
     position: fixed;
-    top: 30px; right:33px;
+    bottom:22px;right:24px;
+    z-index: 100;
+    width:60px; height: 42px;
+    text-align:center;
+    border:2px solid #4a4a4a;
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor:pointer;
+
+    .topbtn_txt {
+        display: block;margin:13px 0 0 2px;
+        font-family: 'League Spartan', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: #2A2A2A;
+        letter-spacing: 2.5px;
+    }
 }
+/*-------topbtnb--------*/
+#topBtnb {
+  position: fixed;
+  bottom:22px;right:24px;
+  z-index: 100;
+  width:60px; height: 42px;
+  text-align:center;
+  border:2px solid #444B44;
+  background-color: rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor:pointer;
 
-@media screen and (max-width: 900px) {
-    header h1 {padding:10px 0 0 10px;}
-    header h1 svg {width:10vw;height: auto;max-width: 100vw;}
-    header .btn_main { top: 10px; right:10px;}
-}
-
-main {}
-
-/*---------------------------------------------sub ocoa---------------------------------------------*/
-.sub_ocoa {
-    width:100%;
-    height:100%;
-    text-align: center;
-    padding-bottom: 94px;
-    background: url(../images/deco_ocoa_1.jpg) no-repeat top right/20.5%, url(../images/deco_ocoa_2.png) no-repeat bottom right;
-}
-.sub_ocoa_img1 {padding-top: 94px;padding-left: 11%;}
-.sub_ocoa_img1 img {width: 100%;max-width: 1663px;}
-.sub_ocoa_img2 {display: flex; justify-content:center;}
-.sub_ocoa_img2w {margin-right:4.2%;}
-.sub_ocoa_img2w img {width: 100%;max-width: 1306px;}
-.sub_ocoa_img2m {}
-.sub_ocoa_img2m img {width: 100%;max-width: 326px;}
-
-
-
-/*---------------------------------------------sub elihigh---------------------------------------------*/
-
-.sub_elihigh {
-    width: 100%;height: 100vh;padding-top:1.5%;
-    background:#FAF9F5 url(../images/deco_elihigh.png) no-repeat center top/100%;
-}
-.sub_elihigh_ceco {position:absolute;left:13%;right:6%;z-index: 3;}
-.sub_elihigh_ceco img {width:100%;max-width:1452px;height:auto;}
-
-.images {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  
-}
-.sub_elihigh_img {
-  position:absolute;
-  height:auto;
-  left:13%;right:6%;
-  display:none;
-}
-.sub_elihigh_img img {width:100%;max-width:1452px;height:auto;}
-.sub_elihigh_img.active {
-  display: block;
-
-}
-
-.pagemv {
-    width: 400px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .topbtn_txtb {
+      display: block;margin:13px 0 0 2px;
+      font-family: 'League Spartan', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #444B44;
+      letter-spacing: 2.5px;
   }
-  
-  .arrows {
-    display: flex;
-    justify-content: center;
-  }
-  
-  button {
-    cursor: pointer;
-    border: none;
-    background-color: #000;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-  
+}
+
+}
+

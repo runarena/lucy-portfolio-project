@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/83a1bce765.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/common.css">
 </head>
-<body>
+<body style="background-color:#FCFCFC;">
     <header>
         <h1>  
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="206" viewBox="0 0 100 206" fill="none">
@@ -21,87 +21,69 @@
     </header>
     <main>
         <div class="pagemv">
-            <div class="arrows ell">
-                <button class="arrow_left">이전</button>
-                <div class="image-count"><span></span></div>
-                <button class="arrow_right">다음</button>
-             </div>
+            <div class="pagenum">
+                <a href="sub_village1.html" title="빌라쥬 페이지 1">1</a>
+                <span class="deco_vill1"></span>
+                <a href="sub_village2.html" title="빌라쥬 페이지 2">2</a>
+                <span class="deco_vill1"></span>
+                <a href="sub_village3.html" title="빌라쥬 페이지 3" style="background-color:#FCE307;">3</a>
+            </div>
         </div>
-        <div class="sub_elihigh">
-            <p class="sub_elihigh_deco"><img src="images/img_tableb.png" alt=""></p>
-            <ul class="images">
-               <li class="sub_elihigh_img"><img src="images/img_elihigh1.png" alt="엘리하이 시안1"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh2.png" alt="엘리하이 시안2"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh3.png" alt="엘리하이 시안3"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh4.png" alt="엘리하이 시안4"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh5.png" alt="엘리하이 시안5"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh6.png" alt="엘리하이 시안6"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh7.png" alt="엘리하이 시안7"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh8.png" alt="엘리하이 시안8"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh9.png" alt="엘리하이 시안9"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh10.png" alt="엘리하이 시안10"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh11.png" alt="엘리하이 시안11"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh12.png" alt="엘리하이 시안12"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh13.png" alt="엘리하이 시안13"></li>
-            </ul>
+        <div class="sub_vill2">
+            <p class="vill2img_vill1"><img src="images/img_vill5.png" alt=""></p>
+            <p class="vill2img_vill2"><img src="images/img_vill7.png" alt=""></p>
+            <div class="deco_vill2">
+                <img src="images/deco_vill_1.png" alt="">
+            </div>
+            <div class="beauty">
+                <ul class="beautyall">
+                    <li class="beautyimg"><img src="images/img_villpic1.jpg" alt=""></li>
+                    <li class="beautyimg"><img src="images/img_villpic2.jpg" alt=""></li>
+                    <li class="beautyimg"><img src="images/img_villpic3.jpg" alt=""></li>
+                    <li class="beautyimg"><img src="images/img_villpic4.jpg" alt=""></li>
+                    <li class="beautyimg"><img src="images/img_villpic5.jpg" alt=""></li>
+                    <li class="beautyimg"><img src="images/img_villpic6.jpg" alt=""></li>
+                    <li class="beautyimg"><img src="images/img_villpic7.jpg" alt=""></li>
+                    <li class="beautyimg"><img src="images/img_villpic8.jpg" alt=""></li>
+                    <li class="beautyimg"><img src="images/img_villpic9.jpg" alt=""></li>
+                    <li class="beautyimg"><img src="images/img_villpic10.jpg" alt=""></li>
+                    <li class="beautyimg"><img src="images/img_villpic11.jpg" alt=""></li>
+                    <li class="beautyimg"><img src="images/img_villpic12.jpg" alt=""></li>
+                </ul>
+            </div>
+            <p class="vill2img_vill3"><img src="images/img_vill6.png" alt=""></p>
         </div>
     </main>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const imagesList = document.querySelectorAll(".sub_elihigh_img");
-            const imageCountSpan = document.querySelector(".image-count span");
-            let currentIndex = 0;
+          const decoVill2 = document.querySelector(".deco_vill2");
+          const images = decoVill2.querySelectorAll("img");
+          let scrollPos = window.scrollY || window.pageYOffset;
+          let isScrolling = false;
 
-            function showImage(index) {
-                imagesList.forEach((image, i) => {
-                    if (i === index) {
-                        image.classList.add("active");
-                    } else {
-                        image.classList.remove("active", "prev", "next");
-                    }
+          function handleScroll() {
+            if (!isScrolling) {
+              isScrolling = true;
+
+              // 부드러운 스크롤 동작
+              requestAnimationFrame(function() {
+                const newScrollPos = window.scrollY || window.pageYOffset;
+                const deltaY = newScrollPos - scrollPos;
+
+                // 스크롤 방향에 따라 이미지를 이동
+                images.forEach(img => {
+                    img.style.left = `${parseFloat(img.style.left || 0) - deltaY}px`;
                 });
 
-                // 이미 생성된 페이지 번호 및 구분선 제거
-                const existingSpans = imageCountSpan.querySelectorAll("span");
-                existingSpans.forEach((span) => {
-                    span.remove();
-                });
-
-                // 현재 페이지수 표시
-                const currentPageSpan = document.createElement("span");
-                currentPageSpan.textContent = `${index + 1}`;
-                currentPageSpan.style.fontSize = "16px";
-                imageCountSpan.appendChild(currentPageSpan);
-
-                // 구분선 추가
-                const slashSpan = document.createElement("span");
-                slashSpan.textContent = "/";
-                slashSpan.classList.add("generated-slash");
-                imageCountSpan.appendChild(slashSpan);
-
-                // 총 페이지수 표시
-                const totalPageSpan = document.createElement("span");
-                totalPageSpan.textContent = `${imagesList.length}`;
-                totalPageSpan.style.fontSize = "16px";
-                imageCountSpan.appendChild(totalPageSpan);
+                // 현재 스크롤 위치를 업데이트
+                scrollPos = newScrollPos;
+                isScrolling = false;
+              });
             }
+          }
 
-            document.querySelector(".arrow_left").addEventListener("click", function () {
-                currentIndex = (currentIndex - 1 + imagesList.length) % imagesList.length;
-                showImage(currentIndex);
-                imagesList[currentIndex].classList.add("prev");
-                imagesList[(currentIndex + 1) % imagesList.length].classList.add("next");
-            });
-
-            document.querySelector(".arrow_right").addEventListener("click", function () {
-                currentIndex = (currentIndex + 1) % imagesList.length;
-                showImage(currentIndex);
-                imagesList[currentIndex].classList.add("next");
-                imagesList[(currentIndex - 1 + imagesList.length) % imagesList.length].classList.add("prev");
-            });
-
-            // 초기 이미지 표시
-            showImage(currentIndex);
+          // 스크롤 이벤트 리스너 등록
+          window.addEventListener("scroll", handleScroll);
         });
     </script>
 </body>

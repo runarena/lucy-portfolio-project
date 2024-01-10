@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/83a1bce765.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/common.css">
 </head>
-<body>
+<body style="background-color:#FCFCFC;">
     <header>
         <h1>  
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="206" viewBox="0 0 100 206" fill="none">
@@ -21,31 +21,58 @@
     </header>
     <main>
         <div class="pagemv">
-            <div class="arrows ell">
+            <div class="pagenum">
+                <a href="sub_village1.html" title="빌라쥬 페이지 1" style="background-color:#FCE307;">1</a>
+                <span class="deco_vill1"></span>
+                <a href="sub_village2.html" title="빌라쥬 페이지 2">2</a>
+                <span class="deco_vill1"></span>
+                <a href="sub_village3.html" title="빌라쥬 페이지 3">3</a>
+            </div>
+        </div>
+        <!--
+        <div class="pagemv">
+            <div class="arrows">
                 <button class="arrow_left">이전</button>
-                <div class="image-count"><span></span></div>
+                <div class="image-count"><span>1<em>/</em>3</span></div>
                 <button class="arrow_right">다음</button>
              </div>
         </div>
-        <div class="sub_elihigh">
-            <p class="sub_elihigh_deco"><img src="images/img_tableb.png" alt=""></p>
-            <ul class="images">
-               <li class="sub_elihigh_img"><img src="images/img_elihigh1.png" alt="엘리하이 시안1"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh2.png" alt="엘리하이 시안2"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh3.png" alt="엘리하이 시안3"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh4.png" alt="엘리하이 시안4"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh5.png" alt="엘리하이 시안5"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh6.png" alt="엘리하이 시안6"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh7.png" alt="엘리하이 시안7"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh8.png" alt="엘리하이 시안8"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh9.png" alt="엘리하이 시안9"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh10.png" alt="엘리하이 시안10"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh11.png" alt="엘리하이 시안11"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh12.png" alt="엘리하이 시안12"></li>
-               <li class="sub_elihigh_img"><img src="images/img_elihigh13.png" alt="엘리하이 시안13"></li>
-            </ul>
+        -->
+        <div class="sub_vill1">
+            <p><img src="images/img_vill1.jpg" alt="빌라쥬 상세페이지1"></p>
+            <p><img src="images/img_vill2.jpg" alt="빌라쥬 상세페이지2"></p>
         </div>
+        <div id="topBtn">
+            <span class="topbtn_txt">TOP</span>
+        </div>
+        <script>
+            // top 버튼의 ID를 설정합니다.
+            const topBtn = document.getElementById("topBtn");
+        
+            // 스크롤 이벤트를 핸들링합니다.
+            window.addEventListener("scroll", () => {
+              // 현재 스크롤 위치를 가져옵니다.
+              const scrollTop = window.pageYOffset;
+        
+              // 스크롤 위치가 0보다 크면 top 버튼을 보이게 합니다.
+              if (scrollTop > 0) {
+                topBtn.style.display = "block";
+              } else {
+                topBtn.style.display = "none";
+              }
+            });
+        
+            // top 버튼의 click 이벤트를 핸들링합니다.
+            topBtn.addEventListener("click", () => {
+              // 페이지를 맨 위로 이동합니다.
+              window.scrollTo(0, 0);
+        
+              // top 버튼을 숨깁니다.
+              topBtn.style.display = "none";
+            });
+          </script>
     </main>
+    <!--
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const imagesList = document.querySelectorAll(".sub_elihigh_img");
@@ -104,5 +131,6 @@
             showImage(currentIndex);
         });
     </script>
+    -->
 </body>
 </html>
