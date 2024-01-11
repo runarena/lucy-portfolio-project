@@ -269,7 +269,7 @@ body {
         }
         .vill2img_vill2 {
           max-width:1920px;
-          padding:10.7% 0% 2.2% 15%;text-align:right; border: 1px solid red;
+          padding:10.7% 0% 2.2% 15%;text-align:right;
           img{width: 100%;max-width:1723px;}
         }
         .vill2img_vill3 {
@@ -279,11 +279,11 @@ body {
       }
 
       .deco_vill2 {
-        width: 100%; padding:8% 0 0% 0; overflow: hidden;
+        width: 100%; padding:8% 0 0% 0; overflow: hidden; z-index: 4;
         img {width: 82%;transform: translateX(-15%);}
       }
       .deco_vill3 {
-        width: 100%; padding:3% 0 4% 0; text-align:right; overflow: hidden;
+        width: 100%; padding:3% 0 4% 0; text-align:right; z-index: 4; overflow: hidden;
         img {width: 82%;transform: translateX(10%);}
       }
 
@@ -305,27 +305,41 @@ body {
       align-items: center;
 
       background: url(../images/deco_vill_2.png) repeat-x bottom;
+      /*
+      &:before {
+        content: "";
+        width:3%;
+        height:40vw;
+        position:absolute;
+        left:12%;
+        z-index: 2;
+        margin-top:3%;
+        background:linear-gradient(to right, rgba(252,252,252,1) 50%, rgba(252,252,252,0) 100%);
+        //*background-blend-mode:multiply;
+        border: 1px solid red;
+      }*/
 
       .beautyparts {
         width: 100%;
-        margin:3% 0 0 0;
+        margin-top:3%;
         overflow-x: hidden;
         overflow-y: hidden;
         white-space: nowrap;
         user-select: none;
         cursor: grab;
-        transition: all 0.2s;
-        /*transform: scale(0.98);*/
+        transition: all 0.6s;
         will-change: transform;
         position: relative;
-        margin-left:9%;
+        margin-left:12%;
+        padding-left:22%;
+        padding-right:23%;
 
         .beautyimg {
-          padding-right: 2%; transform: translateX(100%);
+          padding-right: 2%; transform: translateX(200%);
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          img {width:100%; max-width:635px;}
+          img {width:100%; max-width:590px;}
         }
       }
       .beautyparts.active {
@@ -333,6 +347,7 @@ body {
         cursor: -webkit-grabbing;
         
       }
+      
     }
     @media screen and (min-width: 1250px) {
       .sub_vill1 p:nth-of-type(1) {padding:0 2% 0 12%;}

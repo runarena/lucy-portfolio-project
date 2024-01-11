@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucy Portfolio</title>
     <script src="https://kit.fontawesome.com/83a1bce765.js" crossorigin="anonymous"></script>
+
+    <script src="aos.js"></script>
+    <link rel="stylesheet" href="css/aos.css" />
+
     <link rel="stylesheet" href="css/common.css">
 </head>
-<body style="background-color:#FCFCFC;">
+<body style="background-color:#FCFCFC;"  data-aos-easing="ease-out-back" data-aos-duration="1500" data-aos-delay="0">
     <header>
         <h1>  
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="206" viewBox="0 0 100 206" fill="none">
@@ -36,19 +40,19 @@
                 <img src="images/deco_vill_1.png" alt="">
             </div>
             <div class="beauty">
-                <ul class="beautyparts" id="beautyAll">
-                    <li class="beautyimg"><img src="images/img_villpic1.jpg" alt=""></li>
-                    <li class="beautyimg"><img src="images/img_villpic2.jpg" alt=""></li>
-                    <li class="beautyimg"><img src="images/img_villpic3.jpg" alt=""></li>
-                    <li class="beautyimg"><img src="images/img_villpic4.jpg" alt=""></li>
-                    <li class="beautyimg"><img src="images/img_villpic5.jpg" alt=""></li>
-                    <li class="beautyimg"><img src="images/img_villpic6.jpg" alt=""></li>
-                    <li class="beautyimg"><img src="images/img_villpic7.jpg" alt=""></li>
-                    <li class="beautyimg"><img src="images/img_villpic8.jpg" alt=""></li>
-                    <li class="beautyimg"><img src="images/img_villpic9.jpg" alt=""></li>
-                    <li class="beautyimg"><img src="images/img_villpic10.jpg" alt=""></li>
-                    <li class="beautyimg"><img src="images/img_villpic11.jpg" alt=""></li>
-                    <li class="beautyimg"><img src="images/img_villpic12.jpg" alt=""></li>
+                <ul class="beautyparts">
+                    <li class="beautyimg" data-aos="fade-left"><img src="images/img_villpic1.jpg" alt=""></li>
+                    <li class="beautyimg" data-aos="fade-left"><img src="images/img_villpic2.jpg" alt=""></li>
+                    <li class="beautyimg" data-aos="fade-left"><img src="images/img_villpic3.jpg" alt=""></li>
+                    <li class="beautyimg" data-aos="fade-left"><img src="images/img_villpic4.jpg" alt=""></li>
+                    <li class="beautyimg" data-aos="fade-left"><img src="images/img_villpic5.jpg" alt=""></li>
+                    <li class="beautyimg" data-aos="fade-left"><img src="images/img_villpic6.jpg" alt=""></li>
+                    <li class="beautyimg" data-aos="fade-left"><img src="images/img_villpic7.jpg" alt=""></li>
+                    <li class="beautyimg" data-aos="fade-left"><img src="images/img_villpic8.jpg" alt=""></li>
+                    <li class="beautyimg" data-aos="fade-left"><img src="images/img_villpic9.jpg" alt=""></li>
+                    <li class="beautyimg" data-aos="fade-left"><img src="images/img_villpic10.jpg" alt=""></li>
+                    <li class="beautyimg" data-aos="fade-left"><img src="images/img_villpic11.jpg" alt=""></li>
+                    <li class="beautyimg" data-aos="fade-left"><img src="images/img_villpic12.jpg" alt=""></li>
                 </ul>
             </div>
             <div class="deco_vill3">
@@ -59,6 +63,7 @@
     </main>
 
     <script>
+        //*좌우 드래그 
         const slider = document.querySelector('.beautyparts');
         let isMouseDown = false;
         let startX, scrollLeft;
@@ -91,5 +96,27 @@
         });
       </script>
 
+
+    <script>
+        document.querySelector('html').classList.remove('no-js');
+        if (!window.Cypress) {
+        const scrollCounter = document.querySelector('.js-scroll-counter');
+
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1500,
+            mirror: false,
+            once : true
+        });
+
+        document.addEventListener('aos:in', function(e) {
+            //console.log('in!', e.detail);
+        });
+
+        window.addEventListener('scroll', function() {
+            //scrollCounter.innerHTML = window.pageYOffset;
+        });
+        }
+    </script>
 </body>
 </html>
