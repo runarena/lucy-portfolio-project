@@ -46,31 +46,28 @@
             <span class="topbtn_txt">TOP</span>
         </div>
         <script>
-            // top 버튼의 ID를 설정합니다.
+            //* 탑버튼
             const topBtn = document.getElementById("topBtn");
-        
-            // 스크롤 이벤트를 핸들링합니다.
-            window.addEventListener("scroll", () => {
-              // 현재 스크롤 위치를 가져옵니다.
-              const scrollTop = window.pageYOffset;
-        
-              // 스크롤 위치가 0보다 크면 top 버튼을 보이게 합니다.
-              if (scrollTop > 0) {
+
+            function handleScroll() {
+            const scrollTop = window.pageYOffset;
+            if (scrollTop > 0) {
                 topBtn.style.display = "block";
-              } else {
+            } else {
                 topBtn.style.display = "none";
-              }
-            });
-        
-            // top 버튼의 click 이벤트를 핸들링합니다.
+            }
+            }
+
+            window.addEventListener("scroll", handleScroll);
+
+            // 초기 로딩 시 호출하여 탑 버튼 감추기
+            handleScroll();
+
             topBtn.addEventListener("click", () => {
-              // 페이지를 맨 위로 이동합니다.
-              window.scrollTo(0, 0);
-        
-              // top 버튼을 숨깁니다.
-              topBtn.style.display = "none";
+            window.scrollTo(0, 0);
+            topBtn.style.display = "none";
             });
-          </script>
+        </script>
     </main>
     <!--
     <script>

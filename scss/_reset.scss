@@ -12,3 +12,10 @@ a {
     outline:0;
 }
 img {border:0;}
+
+
+@font-face{
+	font-family:NanumSquareNeoB;
+	src:url(/fonts/NanumSquareNeoB.eot);
+	src:local("※"), url(/fonts/NanumSquareNeoB.woff) format('woff'), url(/fonts/NanumSquareNeoB.ttf) format('truetype');
+  }

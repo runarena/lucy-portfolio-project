@@ -37,20 +37,28 @@
             <span class="topbtn_txt">TOP</span>
         </div>
         <script>
+            //* 탑버튼
             const topBtn = document.getElementById("topBtn");
-            window.addEventListener("scroll", () => {
-              const scrollTop = window.pageYOffset;
-              if (scrollTop > 0) {
+
+            function handleScroll() {
+            const scrollTop = window.pageYOffset;
+            if (scrollTop > 0) {
                 topBtn.style.display = "block";
-              } else {
+            } else {
                 topBtn.style.display = "none";
-              }
-            });
+            }
+            }
+
+            window.addEventListener("scroll", handleScroll);
+
+            // 초기 로딩 시 호출하여 탑 버튼 감추기
+            handleScroll();
+
             topBtn.addEventListener("click", () => {
-              window.scrollTo(0, 0);
-              topBtn.style.display = "none";
+            window.scrollTo(0, 0);
+            topBtn.style.display = "none";
             });
-          </script>
+        </script>
     </main>
 </body>
 </html>

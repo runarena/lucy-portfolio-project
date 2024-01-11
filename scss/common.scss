@@ -358,7 +358,132 @@ body {
       .sub_vill1 p:nth-of-type(2) {padding:0 13% 0 0;}
     }
 
-  }
+    /*---------------------------------------------sub peti---------------------------------------------*/
+    .sub_peti {
+      width:100%;
+      height:100%;
+      text-align: center;
+      padding-bottom: 94px;
+
+      .sub_peti_img1 {
+        padding-top: 94px; padding-left: 7%; padding-right:1.5%;
+        img {width: 100%;max-width: 1460px;}
+      }
+      .sub_peti_img2all {display: flex; justify-content:center;
+        padding-top:10%;
+        .sub_peti_img2a {
+          img {width: 100%;max-width: 762px;}
+        }
+        .sub_peti_img2b {
+          img {width: 100%;max-width: 762px;}
+        }
+      }
+      @media screen and (max-width: 1660px) {
+        .sub_peti_img1 {padding-left: 15%; padding-right:3%;}
+      }
+      @media screen and (min-width: 1250px) {
+        .sub_peti_img2a {padding:0 2% 0 12%;}
+        .sub_peti_img2b {padding:0 6% 0 0;}
+      }
+      @media screen and (max-width: 1250px) {
+        .sub_peti_img2a {padding:0 2% 0 16%;}
+        .sub_peti_img2b {padding:0 13% 0 0;}
+      }
+
+      .sub_peti_img3 {
+        width:100%;
+        height:100vh;
+        overflow:hidden;
+        background: #DBDBDB url(../images/img_peti4.jpg) no-repeat center;
+        background-size:100%;
+      }
+
+      .sub_peti_img4 {
+        padding-top:94px; padding-left:15%; padding-right:5%;
+        img {width:100%; max-width:1566px;}
+      }
+
+    }
+
+    /*---------------------------------------------sub pfd---------------------------------------------*/
+    .sub_pfd {
+      width:100%;
+      height:100%;
+      text-align: center;
+      padding-bottom: 94px;
+      background: url(../images/deco_pdf1.png) no-repeat top left/20.5%;
+      background-position: -4% 16%;
+
+      .sub_pfd_img1 {
+        padding-top: 94px;padding-left: 7%; padding-right:3%;
+        img {width: 100%;max-width: 1722px;}
+      }
+      @media screen and (max-width: 1660px) {
+        .sub_pfd_img1 {padding-left: 11%; padding-right:12%;}
+      }
+      .sub_pfd_img2all {
+        width:100%;
+        margin-top:11.5%;
+        
+        .sub_pfd_txtlogo {
+          
+          dt {
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 500;
+            color: #767676;
+            letter-spacing:1.8vw;
+            text-align:left;
+            em {font-style:normal; color:#000000;}
+          }
+          dd {
+            padding-top:4%;
+            font-family:NanumSquareNeoB;
+            font-size: 15px;
+            font-weight: 500;
+            color: #5D5D5D;
+            line-height:24px;
+            text-align:left;
+            padding-right:5%;
+          }
+        }
+      }
+      @media screen and (min-width: 1540px) {
+        .sub_pfd_img2all {
+          height:80vh; background: url(../images/img_pfd4.png) no-repeat bottom center/90.8%;}
+        .sub_pfd_txtlogo {width:34.2vw; margin-left:6%;}
+        .sub_pfd_txtlogo dt {font-size: 2vw;}
+        .sub_pfd_imglogo img {display:none;}
+      }
+      @media screen and (max-width: 1540px) {
+        .sub_pfd_img2all {text-align:left;}
+        .sub_pfd_imglogo{
+          margin-left:6%; margin-top:4%; margin-right:7%;
+          img {width:100%;}
+        }
+        .sub_pfd_txtlogo {width:90vw; margin-left:6%;}
+        .sub_pfd_txtlogo dt {font-size: 2vw;}
+      }
+      @media screen and (max-width: 1260px) {
+        .sub_pfd_img2all {text-align:left;}
+        .sub_pfd_imglogo{
+          margin-left:6%; margin-top:4%; margin-right:7%;
+          img {width:100%;}
+        }
+        .sub_pfd_txtlogo dt {font-size: 2vw;}
+      }
+      @media screen and (max-width: 1060px) {
+        .sub_pfd_img2all {text-align:left;}
+        .sub_pfd_imglogo{
+          margin-left:6%; margin-top:4%; margin-right:7%;
+          img {width:100%;}
+        }
+        .sub_pfd_txtlogo dt {font-size: 20px;}
+      }
+
+    }
+
+
+  }//*main 닫기
 
 /*-------topbtnw--------*/
 #topBtn {

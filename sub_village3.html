@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/aos.css" />
 
     <link rel="stylesheet" href="css/common.css">
+
 </head>
 <body style="background-color:#FCFCFC;"  data-aos-easing="ease-out-back" data-aos-duration="1500" data-aos-delay="0">
     <header>
@@ -60,6 +61,9 @@
             </div>
             <p class="vill2img_vill3"><img src="images/img_vill6.png" alt=""></p>
         </div>
+        <div id="topBtn">
+            <span class="topbtn_txt">TOP</span>
+        </div>
     </main>
 
     <script>
@@ -94,10 +98,9 @@
           const walk = (x - startX) * 1;
           slider.scrollLeft = scrollLeft - walk;
         });
-      </script>
 
 
-    <script>
+        //*스크롤 슬라이드
         document.querySelector('html').classList.remove('no-js');
         if (!window.Cypress) {
         const scrollCounter = document.querySelector('.js-scroll-counter');
@@ -117,6 +120,30 @@
             //scrollCounter.innerHTML = window.pageYOffset;
         });
         }
-    </script>
+
+        //* 탑버튼
+        const topBtn = document.getElementById("topBtn");
+
+        function handleScroll() {
+        const scrollTop = window.pageYOffset;
+        if (scrollTop > 0) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+        }
+
+        window.addEventListener("scroll", handleScroll);
+
+        // 초기 로딩 시 호출하여 탑 버튼 감추기
+        handleScroll();
+
+        topBtn.addEventListener("click", () => {
+        window.scrollTo(0, 0);
+        topBtn.style.display = "none";
+        });
+
+
+      </script>
 </body>
 </html>
