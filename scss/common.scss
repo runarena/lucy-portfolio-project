@@ -411,7 +411,7 @@ body {
       height:100%;
       text-align: center;
       padding-bottom: 94px;
-      background: url(../images/deco_pdf1.png) no-repeat top left/20.5%;
+      background: url(../images/deco_pfd1.png) no-repeat top left/20.5%;
       background-position: -4% 16%;
 
       .sub_pfd_img1 {
@@ -482,53 +482,201 @@ body {
 
     }
 
+     /*---------------------------------------------sub com---------------------------------------------*/
+    .sub_com {
+      width:100%;
+      height:100%;
+      text-align: center;
+
+      .sub_com_img1 {
+        padding-top: 94px; padding-left: 7%; padding-right:1.5%;
+        img {width: 100%;max-width: 1461px;}
+      }
+      @media screen and (max-width: 1660px) {
+        .sub_com_img1 {padding-left: 15%; padding-right:6%;}
+      }
+      @media screen and (max-width: 800px) {
+        .sub_com_img1 {padding-left: 15%; padding-right:13%;}
+      }
+      .sub_com_img2 {
+        padding-top: 6%; padding-left: 7%; padding-right:1.5%; padding-bottom: 3.9%;
+        img {width: 100%;max-width: 1576px;}
+      }
+      @media screen and (max-width: 1660px) {
+        .sub_com_img2 {padding-left: 15%; padding-right:6%;}
+      }
+      @media screen and (max-width: 800px) {
+        .sub_com_img2 {padding-left: 15%; padding-right:13%;}
+      }
+      .sub_com_img3 {
+        background-color:#EAEAEA ;
+        padding-top: 7.1%; padding-left: 7%; padding-right:1.5%; padding-bottom: 7.2%;
+        img {width: 100%;max-width: 1596px;}
+      }
+      @media screen and (max-width: 1660px) {
+        .sub_com_img3 {padding-left: 15%; padding-right:6%;}
+      }
+      @media screen and (max-width: 800px) {
+        .sub_com_img3 {padding-left: 15%; padding-right:13%;}
+      }
+      .sub_com_img4 {
+        padding-top: 6.8%; padding-left: 7%; padding-right:1.5%; padding-bottom:94px;
+        img {width: 100%;max-width: 1461px;}
+      }
+      @media screen and (max-width: 1660px) {
+        .sub_com_img4 {padding-left: 15%; padding-right:6%;}
+      }
+      @media screen and (max-width: 800px) {
+        .sub_com_img4 {padding-left: 15%; padding-right:13%;}
+      }
+      .sub_com_img5 {
+        padding-top: 6.8%; padding-left: 7%; padding-right:1.5%;
+        img {width: 100%;max-width: 1576px;}
+      }
+      @media screen and (max-width: 1680px) {
+        .sub_com_img5 {padding-left: 8%; padding-right:6%;}
+      }
+      @media screen and (max-width: 1660px) {
+        .sub_com_img5 {padding-left: 15%; padding-right:6%;}
+      }
+      @media screen and (max-width: 800px) {
+        .sub_com_img5 {padding-left: 15%; padding-right:13%;}
+      }
+      .sub_com_img6 {
+        padding-top: 8.2%; padding-left: 8%; padding-right:1.5%; margin-bottom:7%;
+        img {width: 100%;max-width: 1538px;}
+      }
+      @media screen and (max-width: 1660px) {
+        .sub_com_img6 {padding-left: 16%; padding-right:8%;}
+      }
+      @media screen and (max-width: 800px) {
+        .sub_com_img6 {padding-left: 15%; padding-right:13%;}
+      }
+
+      .sub_com_listall {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        padding:6% 3% 0 8.6%;
+        background-color: #E9E9E9;
+        position: relative;
+        .sub_com_list {
+          margin-right:4.6%;
+          &:last-child {margin:0;}
+          a {
+            .sub_com_listimg {
+              img {width:100%;max-width:460px;}
+            }
+            .sub_com_listbtn {
+              display:flex;
+              justify-content: center;
+              padding-top:7.5%;
+              
+              .sub_com_listbtnt {
+                display:block;
+                width:70px;
+                text-align:left;
+                font-family: 'League Spartan', sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+                color: #2A2A2A;
+                letter-spacing: 2px;
+                background-color:#E9E9E9;
+              }
+              .sub_com_listbtnl {
+                display:block; width:20%; height:14px; padding:0;font-size:0;margin:0;
+                background: url(../images/deco_com1.png) repeat-x center right;
+              }
+              .sub_com_listbtnm {
+                display:block; width:14px; height:14px; text-align:right; 
+                border-radius:7px; border:2px solid #444B44; padding:0;font-size:0;margin:0;
+                background: url(../images/deco_com1.png) no-repeat center right;
+              }
+            }
+            @media screen and (max-width: 800px) {
+              .sub_com_listbtn .sub_com_listbtnt {
+                width:100%;font-size:1.8vw;text-align:center; padding:2px 0;
+                background-color: rgb(255, 255, 255, .5);
+              }
+              .sub_com_listbtn .sub_com_listbtnl {display:none;}
+              .sub_com_listbtn .sub_com_listbtnm {display:none;}
+            }
+          }
+        } 
+      }
+      @media screen and (max-width: 1660px) {
+        .sub_com_listall {padding-left: 16%; padding-right:8%;}
+      }
+      @media screen and (max-width: 800px) {
+        .sub_com_listall {padding-left: 15%; padding-right:13%;}
+      }
+      .sub_com_img7 {
+        width:100%; height:auto;
+        img {width:100%;}
+      }
+      .sub_com_img8 {
+        padding-top:5.6%;padding-bottom:94px; padding-left:10%; padding-right:5%;
+        img {width:100%;}
+      }
+      @media screen and (max-width: 1440px) {
+        .sub_com_img8 {padding-left: 15%; padding-right:13%;}
+      }
+    }
+    /*---------------------------------------------sub int---------------------------------------------*/
+    .sub_int {
+      width:100%;
+      height:100%;
+      text-align: center;
+      overflow:hidden;
+      margin-bottom:-10px;
+      .sub_int_img {
+        img {width: 100%;}
+      } 
+  }
 
   }//*main 닫기
+  /*-------topbtnw--------*/
+  #topBtn {
+      position: fixed;
+      bottom:22px;right:24px;
+      z-index: 100;
+      width:60px; height: 42px;
+      text-align:center;
+      border:2px solid #4a4a4a;
+      background-color: rgba(255,255,255,0.5);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      cursor:pointer;
 
-/*-------topbtnw--------*/
-#topBtn {
+      .topbtn_txt {
+          display: block;margin:13px 0 0 2px;
+          font-family: 'League Spartan', sans-serif;
+          font-size: 16px;
+          font-weight: 700;
+          color: #2A2A2A;
+          letter-spacing: 2.5px;
+      }
+  }
+  /*-------topbtnb--------*/
+  #topBtnb {
     position: fixed;
     bottom:22px;right:24px;
     z-index: 100;
     width:60px; height: 42px;
     text-align:center;
-    border:2px solid #4a4a4a;
-    background-color: rgba(255,255,255,0.5);
+    border:2px solid #444B44;
+    background-color: rgba(0,0,0,0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     cursor:pointer;
 
-    .topbtn_txt {
+    .topbtn_txtb {
         display: block;margin:13px 0 0 2px;
         font-family: 'League Spartan', sans-serif;
         font-size: 16px;
         font-weight: 700;
-        color: #2A2A2A;
+        color: #444B44;
         letter-spacing: 2.5px;
     }
-}
-/*-------topbtnb--------*/
-#topBtnb {
-  position: fixed;
-  bottom:22px;right:24px;
-  z-index: 100;
-  width:60px; height: 42px;
-  text-align:center;
-  border:2px solid #444B44;
-  background-color: rgba(0,0,0,0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  cursor:pointer;
-
-  .topbtn_txtb {
-      display: block;margin:13px 0 0 2px;
-      font-family: 'League Spartan', sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      color: #444B44;
-      letter-spacing: 2.5px;
   }
-}
-
-}
-
+}//*body 닫기
