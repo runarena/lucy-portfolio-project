@@ -201,7 +201,7 @@ body main .sub_ocoa {
   height: 100%;
   text-align: center;
   padding-bottom: 94px;
-  background: url(../images/deco_ocoa_1.jpg) no-repeat top right/20.5%, url(../images/deco_ocoa_2.png) no-repeat bottom right;
+  background: url(../images/deco_ocoa_1.jpg) no-repeat top right/20.5%, url(../images/deco_ocoa_2.png) no-repeat bottom right/40%;
 }
 body main .sub_ocoa .sub_ocoa_img1 {
   padding-top: 94px;
@@ -214,6 +214,7 @@ body main .sub_ocoa .sub_ocoa_img1 img {
 body main .sub_ocoa .sub_ocoa_img2 {
   display: flex;
   justify-content: center;
+  padding: 0 7%;
 }
 body main .sub_ocoa .sub_ocoa_img2 .sub_ocoa_img2w {
   margin-right: 4.2%;
@@ -225,6 +226,29 @@ body main .sub_ocoa .sub_ocoa_img2 .sub_ocoa_img2w img {
 body main .sub_ocoa .sub_ocoa_img2 .sub_ocoa_img2m img {
   width: 100%;
   max-width: 326px;
+}
+@media screen and (max-width: 1370px) {
+  body main .sub_ocoa .sub_ocoa_img1 {
+    padding-top: 94px;
+    padding-left: 16%;
+  }
+  body main .sub_ocoa .sub_ocoa_img2 {
+    display: flex;
+    justify-content: center;
+    padding: 0 10% 0 14%;
+  }
+}
+@media screen and (max-width: 500px) {
+  body main .sub_ocoa .sub_ocoa_img1 {
+    padding-top: 94px;
+    padding-left: 16%;
+    padding-right: 3%;
+  }
+  body main .sub_ocoa .sub_ocoa_img2 {
+    display: flex;
+    justify-content: center;
+    padding: 0 14% 0 14%;
+  }
 }
 body main .sub_elihigh {
   width: 100%;
@@ -527,7 +551,7 @@ body main .sub_peti {
 body main .sub_peti .sub_peti_img1 {
   padding-top: 94px;
   padding-left: 7%;
-  padding-right: 1.5%;
+  padding-right: 2%;
 }
 body main .sub_peti .sub_peti_img1 img {
   width: 100%;
@@ -546,13 +570,11 @@ body main .sub_peti .sub_peti_img2all .sub_peti_img2b img {
   width: 100%;
   max-width: 762px;
 }
-@media screen and (max-width: 1660px) {
+@media screen and (min-width: 1250px) and (max-width: 1680px) {
   body main .sub_peti .sub_peti_img1 {
     padding-left: 15%;
-    padding-right: 3%;
+    padding-right: 7%;
   }
-}
-@media screen and (min-width: 1250px) {
   body main .sub_peti .sub_peti_img2a {
     padding: 0 2% 0 12%;
   }
@@ -561,6 +583,10 @@ body main .sub_peti .sub_peti_img2all .sub_peti_img2b img {
   }
 }
 @media screen and (max-width: 1250px) {
+  body main .sub_peti .sub_peti_img1 {
+    padding-left: 15%;
+    padding-right: 13%;
+  }
   body main .sub_peti .sub_peti_img2a {
     padding: 0 2% 0 16%;
   }
@@ -955,6 +981,16 @@ body main .sub_int {
 }
 body main .sub_int .sub_int_img img {
   width: 100%;
+}
+body main .sub_com_img9 {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+body main .sub_com_img9 img {
+  width: 100%;
+  height: auto;
+  max-width: 1900px;
 }
 body #topBtn {
   position: fixed;

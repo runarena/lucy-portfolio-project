@@ -137,12 +137,13 @@ body {
       height:100%;
       text-align: center;
       padding-bottom: 94px;
-      background: url(../images/deco_ocoa_1.jpg) no-repeat top right/20.5%, url(../images/deco_ocoa_2.png) no-repeat bottom right;
+      background: url(../images/deco_ocoa_1.jpg) no-repeat top right/20.5%, url(../images/deco_ocoa_2.png) no-repeat bottom right/40%;
       .sub_ocoa_img1 {
         padding-top: 94px;padding-left: 11%;
         img {width: 100%;max-width: 1663px;}
       }
-      .sub_ocoa_img2 {display: flex; justify-content:center;
+      .sub_ocoa_img2 {
+        display: flex; justify-content:center; padding:0 7%;
         .sub_ocoa_img2w {
           margin-right:4.2%;
           img {width: 100%;max-width: 1306px;}
@@ -150,6 +151,14 @@ body {
         .sub_ocoa_img2m {
           img {width: 100%;max-width: 326px;}
         }
+      }
+      @media screen and (max-width: 1370px) {
+        .sub_ocoa_img1 {padding-top: 94px;padding-left: 16%;}
+        .sub_ocoa_img2 {display: flex; justify-content:center; padding:0 10% 0 14%;}
+      }
+      @media screen and (max-width: 500px) {
+        .sub_ocoa_img1 {padding-top: 94px;padding-left: 16%;padding-right:3%;}
+        .sub_ocoa_img2 {display: flex; justify-content:center; padding:0 14% 0 14%;}
       }
     }
     /*---------------------------------------------sub elihigh---------------------------------------------*/
@@ -366,7 +375,7 @@ body {
       padding-bottom: 94px;
 
       .sub_peti_img1 {
-        padding-top: 94px; padding-left: 7%; padding-right:1.5%;
+        padding-top: 94px; padding-left: 7%; padding-right:2%;
         img {width: 100%;max-width: 1460px;}
       }
       .sub_peti_img2all {display: flex; justify-content:center;
@@ -378,14 +387,13 @@ body {
           img {width: 100%;max-width: 762px;}
         }
       }
-      @media screen and (max-width: 1660px) {
-        .sub_peti_img1 {padding-left: 15%; padding-right:3%;}
-      }
-      @media screen and (min-width: 1250px) {
+      @media screen and (min-width: 1250px) and (max-width: 1680px) {
+        .sub_peti_img1 {padding-left: 15%; padding-right:7%;}
         .sub_peti_img2a {padding:0 2% 0 12%;}
         .sub_peti_img2b {padding:0 6% 0 0;}
       }
       @media screen and (max-width: 1250px) {
+        .sub_peti_img1 {padding-left: 15%; padding-right:13%;}
         .sub_peti_img2a {padding:0 2% 0 16%;}
         .sub_peti_img2b {padding:0 13% 0 0;}
       }
@@ -632,6 +640,10 @@ body {
       .sub_int_img {
         img {width: 100%;}
       } 
+  }
+  .sub_com_img9 {
+    width:100%;text-align:center; overflow: hidden;
+    img {width:100%; height:auto; max-width: 1900px;}
   }
 
   }//*main 닫기
